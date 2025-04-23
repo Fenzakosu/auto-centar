@@ -28,6 +28,9 @@ header nav ul li a {
   font-size: 20px;
   text-decoration: none;
 }
+header nav ul li a:hover {
+  color: #b96d34;
+}
 header nav ul li img {
   margin: 0px;
   vertical-align: middle;
@@ -58,6 +61,17 @@ header nav ul li img {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   padding: 10px;
+}
+.sellers .locations div p {
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 13px;
+}
+.sellers .locations div p span {
+  color: #b96d34;
+}
+.sellers .locations div:hover {
+  border: 1px solid #003152;
 }
 
 .cars {

@@ -1,14 +1,10 @@
-$color-dblue: #003152;
-$font-family: Arial, Helvetica, sans-serif;
-$color-lblue: #dde0e9;
-$color-gbrown: #b96d34;
-$bcolor-gray: rgba(255, 255, 255, 0.7);
+@use 'variables';
 
 body {
     margin: 0;
     padding: 0;
-    font-family: $font-family;
-    color: $color-dblue;
+    font-family: variables.$font-family;
+    color: variables.$color-dblue;
     height: 100%;
 }
 
@@ -33,11 +29,16 @@ header {
                 list-style: none;
 
                 a {
-                    color: $color-dblue;
-                    font-family: $font-family;
+                    color: variables.$color-dblue;
+                    font-family: variables.$font-family;
                     font-size: 20px;
                     text-decoration: none;
+
+                    &:hover {
+                        color: variables.$color-gbrown;
+                    }
                 }
+
 
                 img {
                     margin: 0px;
@@ -75,9 +76,23 @@ header {
 
         div {
 
-            background-color: $bcolor-gray;
+            background-color: variables.$bcolor-gray;
             border-radius: 10px;
             padding: 10px;
+
+            p {
+                font-weight: bold;
+                padding-left: 5px;
+                font-size: 13px;
+
+                span {
+                    color: variables.$color-gbrown;
+                }
+            }
+
+            &:hover {
+                border: 1px solid variables.$color-dblue;
+            }
         }
     }
 }
@@ -91,8 +106,8 @@ header {
 
     form {
         width: 60%;
-        background-color: $color-lblue;
-        border: 1px solid $color-dblue;
+        background-color: variables.$color-lblue;
+        border: 1px solid variables.$color-dblue;
         border-radius: 10px;
         margin-left: 10px;
     }
@@ -112,7 +127,7 @@ header {
             justify-content: center;
             align-content: center;
             width: 40%;
-            color: $color-dblue;
+            color: variables.$color-dblue;
             font-weight: bold;
             text-align: center;
 
@@ -140,14 +155,14 @@ header {
         }
 
         select {
-            border: 1px solid $color-dblue;
+            border: 1px solid variables.$color-dblue;
             border-radius: 15px;
             background-color: white;
             height: 20px;
         }
 
         input {
-            border: 1px solid $color-dblue;
+            border: 1px solid variables.$color-dblue;
             border-radius: 15px;
             background-color: white;
             height: 20px;
@@ -179,8 +194,8 @@ header {
             flex-direction: column;
             align-items: center;
             width: 40%;
-            background-color: $color-lblue;
-            border: 1px solid $color-dblue;
+            background-color: variables.$color-lblue;
+            border: 1px solid variables.$color-dblue;
             border-radius: 15px;
             min-height: 170px;
             margin: 5px;
@@ -212,7 +227,7 @@ header {
 }
 
 footer {
-    background-color: $color-dblue;
+    background-color: variables.$color-dblue;
     height: auto;
     min-height: 30px;
     width: 100%;
@@ -236,3 +251,5 @@ footer {
         margin-left: auto;
     }
 }
+
+@include variables.responsive(variables.$breakpoint-extra-small) {}

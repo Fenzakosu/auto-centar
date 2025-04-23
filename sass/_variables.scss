@@ -1,0 +1,15 @@
+$color-dblue: #003152;
+$font-family: Arial, Helvetica, sans-serif;
+$color-lblue: #dde0e9;
+$color-gbrown: #b96d34;
+$bcolor-gray: rgba(255, 255, 255, 0.7);
+$breakpoint-extra-small: 576px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 992px;
+$breakpoint-large: 1200px;
+
+@mixin responsive($max-screen-size) {
+    @media screen and (max-width:$max-screen-size) {
+        @content;
+    }
+}
